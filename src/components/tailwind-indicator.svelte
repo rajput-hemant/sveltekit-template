@@ -3,7 +3,7 @@
 </script>
 
 {#if dev}
-	<div class="fixed bottom-1 right-1 z-50 text-xs text-white">
+	<div class="fixed bottom-1 right-1 z-50 text-xs text-black dark:text-white">
 		<div class="block sm:hidden">xs</div>
 		<div class="hidden sm:block md:hidden">sm</div>
 		<div class="hidden md:block lg:hidden">md</div>

@@ -55,45 +55,48 @@ git commit --no-verify -m "init"
 
 In the project directory, you can run:
 
-| **Script**   | **Description**                                   |
-| ------------ | ------------------------------------------------- |
-| `dev`        | Runs the app in the development mode.             |
-| `build`      | Builds the app for production.                    |
-| `start`      | Runs the built app in the production mode.        |
-| `preview`    | Builds and serves the app in the production mode. |
-| `lint`       | Runs next lint on the project.                    |
-| `type-check` | Runs TypeScript type checker.                     |
-| `fmt:check`  | Checks if the code is formatted with Prettier.    |
-| `fmt:write`  | Formats the code with Prettier.                   |
-| `prepare`    | Installs husky git hooks.                         |
+| **Script**    | **Description**                                   |
+| ------------- | ------------------------------------------------- |
+| `dev`         | Runs the app in the development mode.             |
+| `build`       | Builds the app for production.                    |
+| `start`       | Runs the built app in the production mode.        |
+| `preview`     | Builds and serves the app in the production mode. |
+| `lint`        | Runs next lint on the project.                    |
+| `check`       | Runs SvelteKit checks.                            |
+| `check:watch` | Runs SvelteKit checks in watch mode.              |
+| `fmt:check`   | Checks if the code is formatted with Prettier.    |
+| `fmt:write`   | Formats the code with Prettier.                   |
+| `prepare`     | Installs husky git hooks.                         |
 
 ## Folder Structure
 
 ```bash
 .
 ├── public
-│   ├── favicon.ico
-│   ├── nextjs-dark.svg
-│   └── nextjs-light.svg
+│   └── favicon.png
 ├── src
-│   ├── app
-│   │   ├── layout.tsx
-│   │   └── page.tsx
-│   ├── lib
-│   │   └── utils.ts
-│   ├── styles
-│   │   └── globals.css
-│   └── types
-│       └── reset.d.ts
+│   ├── components
+│   │   └── tailwind-indicator.svelte
+│   ├── lib
+│   │   └── utils.ts
+│   ├── routes
+│   │   ├── +layout.svelte
+│   │   └── +page.svelte
+│   ├── types
+│   │   └── reset.d.ts
+│   ├── app.css
+│   ├── app.d.ts
+│   └── app.html
+├── bun.lockb
 ├── LICENSE
-├── README.md
-├── next.config.js
-├── next-env.d.ts
 ├── package.json
 ├── postcss.config.js
+├── README.md
 ├── renovate.json
+├── svelte.config.js
 ├── tailwind.config.js
-└── tsconfig.json
+├── tsconfig.json
+└── vite.config.ts
 ```
 
 ## After Installation Checklist

@@ -1,12 +1,7 @@
 <script lang="ts">
 	import { Clipboard, ClipboardCheck, Github, Twitter } from 'lucide-svelte';
 
-	const packageManagers = {
-		bun: 'bunx',
-		pnpm: 'pnpx',
-		npm: 'npx',
-		yarn: 'yarn dlx'
-	};
+	const packageManagers = { bun: 'bunx', pnpm: 'pnpx', npm: 'npx', yarn: 'yarn dlx' };
 
 	let isCopied = false;
 	let showDropdown = false;
@@ -15,7 +10,7 @@
 		showDropdown = false;
 		isCopied = true;
 
-		const text = `${packageManagers[pm]} degit rajput-hemant/nextjs-template <project-name>`;
+		const text = `${packageManagers[pm]} degit rajput-hemant/sveltekit-template <project-name>`;
 
 		try {
 			navigator.clipboard.writeText(text);
@@ -49,18 +44,20 @@
 
 					<p class="mx-auto max-w-[600px] text-zinc-200 md:text-xl">
 						A SvelteKit template with TypeScript, TailwindCSS, Lucide Icons and pre-configured with
-						ESLint, Prettier and Husky.
+						ESLint, Prettier and Husky git hooks.
 					</p>
 				</div>
 
 				<div
-					class="relative mx-auto rounded-xl border border-zinc-700 p-1 text-zinc-200 hover:border-zinc-600"
+					class="relative mx-auto rounded-xl border border-zinc-800 p-1 text-zinc-200 shadow-md transition-shadow duration-300 hover:border-zinc-700 hover:shadow-white/10"
 				>
-					<p class="flex w-full cursor-pointer items-center gap-2 bg-white/10 p-3 font-mono">
+					<p
+						class="flex w-full cursor-pointer items-center gap-2 rounded-md bg-white/10 p-3 font-mono"
+					>
 						<span class="text-orange-500">$</span>
 
 						<span>
-							pnpx degit rajput-hemant/nextjs-template {'<project-name>'}
+							pnpx degit rajput-hemant/sveltekit-template {'<project-name>'}
 						</span>
 
 						<button
@@ -123,18 +120,18 @@
 				href="https://github.com/rajput-hemant"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="h-10 w-10 rounded-md border border-transparent p-2 hover:border-zinc-700 hover:bg-white/10"
+				class="rounded-md border border-transparent p-2 hover:border-zinc-700 hover:bg-white/10"
 			>
-				<Github />
+				<Github class="h-5 w-5" />
 			</a>
 
 			<a
 				href="https://x.com/rajput_hemant01"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="h-10 w-10 rounded-md border border-transparent p-2 hover:border-zinc-700 hover:bg-white/10"
+				class="rounded-md border border-transparent p-2 hover:border-zinc-700 hover:bg-white/10"
 			>
-				<Twitter />
+				<Twitter class="h-5 w-5" />
 			</a>
 		</div>
 
@@ -173,5 +170,10 @@
 				50px 0,
 				125px 25px;
 		}
+	}
+
+	::selection {
+		color: hsl(0, 0%, 17%);
+		background-color: hsl(0, 0%, 100%);
 	}
 </style>
