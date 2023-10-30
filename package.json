@@ -24,8 +24,8 @@
 		]
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^17.8.1",
-		"@commitlint/config-conventional": "^17.8.1",
+		"@commitlint/cli": "^18.2.0",
+		"@commitlint/config-conventional": "^18.1.0",
 		"@sveltejs/adapter-auto": "^2.1.0",
 		"@sveltejs/kit": "^1.27.1",
 		"@total-typescript/ts-reset": "^0.5.1",
