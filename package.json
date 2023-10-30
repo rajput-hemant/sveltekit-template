@@ -38,7 +38,7 @@
 		"eslint-plugin-svelte": "^2.34.0",
 		"eslint-plugin-tailwindcss": "^3.13.0",
 		"husky": "^8.0.3",
-		"lint-staged": "^14.0.1",
+		"lint-staged": "^15.0.2",
 		"lucide-svelte": "^0.290.0",
 		"postcss": "^8.4.31",
 		"prettier": "^3.0.3",
