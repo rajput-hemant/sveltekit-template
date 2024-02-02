@@ -13,7 +13,7 @@
 		"lint": "eslint .",
 		"fmt:check": "prettier --plugin=prettier-plugin-svelte --plugin=prettier-plugin-tailwindcss --check .",
 		"fmt:write": "prettier --plugin=prettier-plugin-svelte --plugin=prettier-plugin-tailwindcss --write .",
-		"prepare": "husky install"
+		"prepare": "husky"
 	},
 	"lint-staged": {
 		"*.{html,css,ts,svelte}": [
