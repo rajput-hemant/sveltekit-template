@@ -11,13 +11,13 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "eslint .",
-		"fmt:check": "prettier --plugin=prettier-plugin-svelte --plugin=prettier-plugin-tailwindcss --check .",
-		"fmt:write": "prettier --plugin=prettier-plugin-svelte --plugin=prettier-plugin-tailwindcss --write .",
+		"fmt": "prettier --write .",
+		"fmt:check": "prettier --check .",
 		"prepare": "husky"
 	},
 	"lint-staged": {
 		"*.{html,css,ts,svelte}": [
-			"prettier --plugin=prettier-plugin-svelte --plugin=prettier-plugin-tailwindcss --write ."
+			"prettier --write ."
 		],
 		"*.{ts,svelte}": [
 			"eslint ."
@@ -27,7 +27,7 @@
 		"@commitlint/cli": "^18.6.0",
 		"@commitlint/config-conventional": "^18.6.0",
 		"@sveltejs/adapter-auto": "^2.1.1",
-		"@sveltejs/kit": "^1.30.3",
+		"@sveltejs/kit": "^2.5.0",
 		"@total-typescript/ts-reset": "^0.5.1",
 		"@typescript-eslint/eslint-plugin": "^6.21.0",
 		"@typescript-eslint/parser": "^6.21.0",
